@@ -912,7 +912,7 @@ namespace DiscordSharp
                         op = 3,
                         d = new
                         {
-                            idle_since = IdleSinceUnixTime == null ? (object)null : IdleSinceUnixTime,
+                            since = IdleSinceUnixTime == null ? (object)null : IdleSinceUnixTime,
                             game = new
                             {
                                 name = gameName,
@@ -932,7 +932,7 @@ namespace DiscordSharp
                         op = 3,
                         d = new
                         {
-                            idle_since = IdleSinceUnixTime == null ? (object)null : IdleSinceUnixTime,
+                            since = IdleSinceUnixTime == null ? (object)null : IdleSinceUnixTime,
                             game = (object)null
                         }
                     });
@@ -954,7 +954,7 @@ namespace DiscordSharp
                     op = 3,
                     d = new
                     {
-                        idle_since = idle ? (int)(DateTime.UtcNow - epoch).TotalMilliseconds : (object)null,
+                        since = idle ? (int)(DateTime.UtcNow - epoch).TotalMilliseconds : (object)null,
                         game = CurrentGameName.ToLower().Trim() == "" ? (object)null : new { name = CurrentGameName }
                     }
                 });
